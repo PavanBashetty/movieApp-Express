@@ -21,21 +21,23 @@ app.get("/", (req,res)=>{
     res.send("Hello again from the movie app server!")
 });
 
-
+/*
 const connection  = mysql.createConnection({
     host: process.env.DB_HOST,
     user:process.env.DB_USER,
     password:process.env.DB_PASS,
     database:process.env.DB_NAME
 });
-/*
+*/
+
 const connection  = mysql.createConnection({
-    host: "IP address",
+    socketPath:"/cloudsql/gcp-project-376411:europe-west3:root",
+    host: "35.246.175.93",
     user:"root",
-    password:"",
+    password:"----",
     database:"SRH_04"
 });
-*/
+
 connection.connect((err)=>{
     if(err) throw err
     console.log("Movie app database connected successfully");
