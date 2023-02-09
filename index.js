@@ -22,6 +22,7 @@ app.get("/", (req,res)=>{
 });
 
 /*
+// Connect to the local MySQL database
 const connection  = mysql.createConnection({
     host: process.env.DB_HOST,
     user:process.env.DB_USER,
@@ -30,12 +31,13 @@ const connection  = mysql.createConnection({
 });
 */
 
+// Connect to the GCP server
 const connection  = mysql.createConnection({
-    socketPath:"/cloudsql/gcp-project-376411:europe-west3:root",
-    host: "35.246.175.93",
-    user:"root",
-    password:"----",
-    database:"SRH_04"
+    socketPath:"/cloudsql/--",
+    host: "--",
+    user:"--",
+    password:"--",
+    database:"--"
 });
 
 connection.connect((err)=>{
