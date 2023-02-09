@@ -33,11 +33,11 @@ const connection  = mysql.createConnection({
 
 // Connect to the GCP server
 const connection  = mysql.createConnection({
-    socketPath:"/cloudsql/--",
-    host: "--",
-    user:"--",
-    password:"--",
-    database:"--"
+    socketPath:"/cloudsql/process.env.INSTANCENAME",
+    host: "process.env.MYSQLINSTANCEIPADDRESS",
+    user:"process.env.USER",
+    password:"process.env.PASSWORD",
+    database:"process.env.DB_NAME"
 });
 
 connection.connect((err)=>{
