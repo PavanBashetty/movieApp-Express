@@ -1,4 +1,4 @@
-The main objective of our project is to do a compartive analysis between GCP and AWS.
+The main objective of the project is to do a compartive analysis between GCP and AWS.
 Amongst other sub topics, we also included a web app implmentation in both cloud platform for comparision.
 For this, we developed a full stack web app using Node.js, Vue.js, and MySQL.
 Upon deploying the application successfully in local, we went through following steps to deploy it in GCP. [side note: AWS deployment was not done since the service is not free there]
